@@ -202,6 +202,9 @@ constructor(attrs){
   this.width = attrs.width;
   this.height = attrs.height;
 }
+surfaceArea(){
+  return 2 *(this.length * this.width + this.length * this.height +this.width * this.height);
+}
 }
 
 
