@@ -67,8 +67,10 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    array.map(function(item){
+      return array.item;
+    })
   }
   
   
@@ -148,7 +150,9 @@ function CuboidMaker(attrs){
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
-
+CuboidMaker.prototype.volume= function(){
+  return this.length * this.width * this.height;
+}
 
 
 
