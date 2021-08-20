@@ -205,6 +205,9 @@ constructor(attrs){
 surfaceArea(){
   return 2 *(this.length * this.width + this.length * this.height +this.width * this.height);
 }
+volume(){
+  return this.length * this.width * this.height;
+}
 }
 
 
