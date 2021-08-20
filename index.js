@@ -173,7 +173,11 @@ CuboidMaker.prototype.volume= function(){
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
-
+function Child(childattrs){
+  CuboidMaker.call(this,childattrs);
+  this.isChild =childattrs.isChild;
+}
+Child.prototype= Object.create(CuboidMaker.prototype);
 const cuboid =  new CuboidMaker({
   name:'cuboid',
   length:4,
@@ -192,7 +196,12 @@ const cuboid =  new CuboidMaker({
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-
+constructor(attrs){
+  this.name= attrs.name;
+  this.length = attrs.length;
+  this.width = attrs.width;
+  this.height = attrs.height;
+}
 }
 
 
